@@ -1,0 +1,893 @@
+/* 
+====================================
+CSS Reset
+====================================
+*/
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+=================================
+Fonts
+=================================
+*/
+
+@font-face {
+    font-family: 'NS Sans Bold';
+    src: url('fonts/NS Sans/nssanbol-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NS Sans';
+    src: url('fonts/NS Sans/nssans-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'NS Sans';
+}
+
+h2 {
+    font-size: 2.375em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h2,
+#verder h3,
+#ontdek h3,
+#aanbeveling h4 {
+    color: #233974;
+}
+
+a {
+    text-decoration: none;
+    color: #2575bb;
+}
+
+h1 {
+    font: 1.5em 'NS Sans Bold';
+    color: #233974;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+/*
+==============================
+Navigatie
+==============================
+*/
+
+nav > img {
+    display: flex;
+    margin: auto;
+    height: 4.5em;
+}
+
+/*plaatst het logo en geeft een maat*/
+
+form img {
+    display: inline-flex;
+    width: 1.3em;
+    margin: auto;
+    align-self: center;
+}
+
+/*vormgeving voor het zoek icoontje */
+
+nav form {
+    display: flex;
+    border: none;
+    background-color: #e4e3e5;
+    padding: 0.25em 1em;
+}
+
+/*vormgeving voor het gehele zoek form*/
+
+form input {
+    background-color: transparent;
+    border: none;
+}
+
+form button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+
+.navigatie {
+    display: flex;
+    background-color: white;
+}
+
+ul {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* geeft de navigatie unordered list vorm */
+
+ul a:last-of-type img {
+    width: 2.4em;
+    margin-right: 1em;
+}
+
+ul li {
+    padding: 1em;
+}
+
+ul a:last-of-type img {
+    animation: aanbevelingen 1s;
+    animation-iteration-count: infinite;
+}
+
+
+/*selecteert het postvakje voor een css animatie*/
+
+@keyframes aanbevelingen {
+    from,
+    33%,
+    66%,
+    to {
+        transform: rotate(4deg);
+    }
+    16%,
+    50%,
+    83% {
+        transform: rotate(-4deg);
+    }
+}
+
+/*zorgt ervoor dat het postvakje 4 graden draait naar links en rechts */
+
+li a:hover,
+li a:active {
+    color: white;
+    background-color: #233974;
+    padding: .625em;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -o-transition: 250ms ease;
+    transition: 250ms ease;
+}
+
+.zoom:hover {
+    width: 3em;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -o-transition: 250ms ease;
+    transition: 250ms ease;
+}
+
+/*een css class die wordt aangeroepen in js om in te zoomen op het postvakje bij een mouseover*/
+
+/*
+=============================
+Overzicht
+=============================
+*/
+
+body {
+    background-color: #e7e6e8;
+    overflow-x: hidden;
+}
+
+
+/************* Ontdek *************/
+
+#ontdek {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    background-color: #f9c517;
+    height: 17em;
+    border-bottom: .2em solid #6a6a7a;
+    border-top: .2em solid #6a6a7a;
+}
+
+#ontdek > h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* wordt geplaatst binnen een grid*/
+
+#ontdek article {
+    height: 100%;
+}
+
+/*hele height wordt gebruikt van de grid*/
+
+#ontdek a {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+#ontdek > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ontdek img {
+    order: 1;
+}
+
+#ontdek h3 {
+    order: 2;
+}
+
+/***********    Verder   **********/
+
+#verder {
+    float: left;
+    height: 100%;
+}
+
+#verder article {
+    height: 10em;
+}
+
+#verder a {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+#verder > div {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#verder h2,
+#aanbeveling h2 {
+    font-size: 1.5em;
+}
+
+#verder img {
+    order: 1;
+}
+
+#verder h3 {
+    order: 2;
+}
+
+/*********    Aanbeveling    *********/
+
+#aanbeveling {
+    display: grid;
+}
+
+#aanbeveling article {
+    height: 10em;
+    margin-top: 1em;
+    display: grid;
+}
+
+#aanbeveling a:first-child {
+    height: 1.8em;
+    z-index: 10001;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aanbevelende img:first-of-type {
+    height: 1.6em;
+    width: 1.6em;
+}
+
+#aanbeveling a {
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+#aanbeveling > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aanbevelende img {
+    order: 1;
+}
+
+#aanbeveling h3 {
+    color: white;
+    order: 2;
+}
+
+#aanbeveling h4 {
+    margin-top: .5em;
+    order: 2;
+}
+
+/******  Overall ********/
+
+#verder,
+#aanbeveling {
+    margin: 1em;
+}
+
+#verder h2,
+#aanbeveling h2 {
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+#ontdek h3,
+#verder h3,
+#aanbeveling h4 {
+    text-align: center;
+}
+
+section img {
+    width: 7em;
+}
+
+#aanbeveling,
+#verder {
+    width: 45%;
+    background-color: #FFF;
+    border-bottom: .2em solid #6a6a7a;
+}
+
+.profielfoto {
+    width: 3em;
+    border-radius: 50%;
+}
+
+/*alleen de foto's van je vrienden bij de aanbeveling*/
+
+main section {
+    padding: 1em;
+}
+
+#verder h3:hover,
+#ontdek h3:hover,
+#aanbeveling h4:hover,
+#verder h3:active,
+#ontdek h3:active,
+#aanbeveling h4:active {
+    font-family: 'NS Sans Bold';
+    text-decoration: underline;
+}
+
+.aanbevelende {
+    color: white;
+    background-color: #233974;
+}
+
+.aanbevelende:visited {
+    color: #f9c517;
+}
+
+.verderknop {
+    width: 1.5em;
+}
+
+footer img {
+    width: 2em;
+}
+
+/******** Hovers en animaties *********/
+
+#ontdek {
+    position: relative;
+}
+
+article footer {
+    display: flex;
+    width: 7em;
+    height: 7.1em;
+    position: absolute;
+    background-color: #233974;
+    transform: translateY(-135%);
+    transition: all .25s;
+    opacity: 0;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* geeft de footer vorm en zorgt ervoor dat het niet te zien is */
+
+article footer:hover,
+article footer:active {
+    opacity: .8;
+}
+
+/*weergeeft de footer boven de afbeelding */
+
+footer button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.hartje {
+    animation: hartje 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes hartje {
+    from,
+    33%,
+    66%,
+    to {
+        transform: rotate(4deg);
+    }
+    16%,
+    50%,
+    83% {
+        transform: rotate(-4deg);
+    }
+}
+
+
+/*
+==================
+Verhalen
+==================
+*/
+
+.verhalen img {
+    border-top: .2em solid #6a6a7a;
+}
+
+.verhalen img {
+    width: 100%;
+}
+
+.verhalen > img:nth-of-type(2),
+.verhalen > img:nth-of-type(3) {
+    display: none;
+}
+
+/*
+=========================
+Breakpoints
+=========================
+*/
+
+@media (max-width: 55em) {
+    .verhalen img:nth-of-type(2) {
+        display: flex;
+    }
+    .verhalen img:nth-of-type(1) {
+        display: none;
+    }
+    #verder article:last-of-type,
+    #aanbeveling article:last-of-type,
+    #ontdek article:nth-of-type(4),
+    #ontdek article:nth-of-type(5) {
+        display: none;
+    }
+
+    nav input {
+        width: 5em;
+    }
+
+    nav input:hover,
+    nav input:active {
+        width: 9em;
+        transition: all .25s;
+    }
+
+    ul a:last-of-type img,
+    nav form {
+        position: absolute;
+        top: 1.5em;
+    }
+    ul a:last-of-type img {
+        margin-right: 0;
+        left: 2%
+    }
+
+    nav form {
+        right: 2%;
+    }
+}
+
+/*breakpoint voor tablet */
+
+@media (max-width: 40em) {
+    .verhalen img:nth-of-type(3) {
+        display: flex;
+    }
+
+    .verhalen img:nth-of-type(2) {
+        display: none;
+    }
+
+    #ontdek article:nth-of-type(3) {
+        display: none;
+    }
+    #verder,
+    #aanbeveling {
+        width: 90%;
+    }
+
+    .navigatie h1 {
+        display: none;
+    }
+    ul {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+    }
+    ul li {
+        order: 2;
+        align-self: flex-start;
+    }
+    ul a:last-of-type img {
+        order: 1;
+    }
+    ul form {
+        order: 3;
+    }
+    /*veranderde de order van de navigatie*/
+}
+
+/*breakpoint voor telefoon */
+
+/*
+===========================
+Aanmelden & Registreren
+===========================
+*/
+
+#registreren,
+#aanmelden {
+    color: white;
+    background-color: #f9c517;
+    padding: 2em;
+    margin: auto 2em;
+}
+
+#aanmelden div,
+#registreren div {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#registreren legend,
+#aanmelden legend {
+    font-family: 'NS Sans Bold';
+    font-size: 1.5em;
+    align-self: flex-start;
+}
+
+#aanmelden fieldset {
+    display: flex;
+    background-color: #233974;
+    padding: 5em 2em;
+}
+
+#registreren fieldset:nth-of-type(1) {
+    display: flex;
+    background-color: #233974;
+    padding: 5em 2em 0 2em;
+}
+
+#registreren fieldset:nth-of-type(2) {
+    display: flex;
+    background-color: #233974;
+    padding: 2em 2em 5em 2em;
+}
+
+/*vormgeing voor de fieldset over de accountgegevens*/
+
+.logo-registreren {
+    display: flex;
+    width: 10em;
+    margin: auto;
+}
+
+#aanmelden label,
+#registreren label {
+    margin-top: .625rem;
+    align-self: flex-start;
+}
+
+#aanmelden div,
+#registreren div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#aanmelden a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: .8em;
+    margin-top: .625em;
+    text-decoration: underline;
+}
+
+#aanmelden input[type="email"],
+#aanmelden input[type="password"],
+#registreren input[type="email"],
+#registreren input[type="password"],
+#registreren input[type="text"],
+#registreren input[type="date"],
+#registreren input[type="tel"],
+#registreren input[type="radio"] {
+    width: 20em;
+    align-self: flex-start;
+    margin-top: .3em;
+    background-color: white;
+}
+
+input[type="submit"],
+input[type="button"] {
+    padding: .6em 1em;
+    font-family: 'NS Sans Bold';
+    border-bottom: .2em solid #6a6a7a;
+}
+
+#registreren input[type="submit"] {
+    margin-top: 2em;
+}
+
+input[type="button"] {
+    display: inline-flex;
+    align-self: flex-end;
+    background-color: #2575b9;
+    color: white;
+    margin-top: 3em;
+}
+
+input[type="submit"] {
+    display: inline-flex;
+    align-self: center;
+    background-color: #f9c517;
+    color: #233974;
+    margin-top: .625rem;
+}
+
+input[type="reset"] {
+    display: inline-flex;
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+    align-self: flex-end;
+    margin-top: 3em;
+}
+
+#aanmelden a:hover,
+#aanmelden a:active {
+    color: #f9c517;
+}
+
+input[type="reset"]:hover,
+input[type="reset"]:active {
+    font-family: 'NS Sans Bold';
+}
+
+#aanmelden input[type="email"]:valid,
+#aanmelden input[type="password"]:valid,
+#registreren input[type="email"]:valid,
+#registreren input[type="password"]:valid,
+#registreren input[type="text"]:valid,
+#registreren input[type="date"]:valid,
+#registreren input[type="tel"]:valid {
+    border-bottom: .2em solid green;
+}
+
+#aanmelden input[type="email"]:invalid,
+#aanmelden input[type="password"]:invalid,
+#registreren input[type="email"]:invalid,
+#registreren input[type="password"]:invalid,
+#registreren input[type="text"]:invalid,
+#registreren input[type="date"]:invalid,
+#registreren input[type="tel"]:invalid {
+    border-bottom: .2em solid red;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Registreren</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo-registreren" src="img/ns%20logo.png" alt="Logo">
+    </header>
+    <main>
+        <form id="registreren" action="index.html">
+            <fieldset>
+                <div>
+                    <legend>Persoonsgegevens</legend>
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" id="voornaam" required>
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" id="achternaam" required>
+                    <label for="geboortedatum">Geboortedatum</label>
+                    <input type="date" name="geboortedatum" min="2000-01-02" max="1900-01-01" id="geboortedatum" required>
+                    <label>Geslacht</label>
+                    <label for="man">Man</label>
+                    <input type="radio" name="gender" value="Man" id="man">
+                    <label for="vrouw">Vrouw</label>
+                    <input type="radio" name="gender" value="Vrouw" id="vrouw">
+                    <label for="neutraal">Neutraal</label>
+                    <input type="radio" name="gender" value="Neutraal" id="neutraal">
+                    <label for="telefoonnummer">Telefoonnummer</label>
+                    <input type="tel" name="telefoonnummer" pattern="[0][1-9]{1} [0-9]{8}" id="telefoonnummer" required> </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <legend>Accountgegevens</legend>
+                    <label for="email">E-mailadres</label>
+                    <input required type="email">
+                    <label for="wachtwoord">Wachtwoord</label>
+                    <input required type="password">
+                    <input type="submit" value="Registreren">
+                    <input type="reset">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
