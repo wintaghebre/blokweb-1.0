@@ -238,7 +238,7 @@ h1 {
     color: #233974;
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 /*
@@ -260,6 +260,10 @@ form img {
     width: 1.3em;
     margin: auto;
     align-self: center;
+}
+
+nav h1 {
+    display: flex;
 }
 
 /*vormgeving voor het zoek icoontje */
@@ -746,7 +750,6 @@ Aanmelden & Registreren
     color: white;
     background-color: #f9c517;
     padding: 2em;
-    margin: auto 2em;
 }
 
 #aanmelden div,
@@ -827,7 +830,7 @@ Aanmelden & Registreren
 }
 
 input[type="submit"],
-input[type="button"] {
+#registreren-knop {
     padding: .6em 1em;
     font-family: 'NS Sans Bold';
     border-bottom: .2em solid #6a6a7a;
@@ -835,14 +838,6 @@ input[type="button"] {
 
 #registreren input[type="submit"] {
     margin-top: 2em;
-}
-
-input[type="button"] {
-    display: inline-flex;
-    align-self: flex-end;
-    background-color: #2575b9;
-    color: white;
-    margin-top: 3em;
 }
 
 input[type="submit"] {
@@ -861,6 +856,16 @@ input[type="reset"] {
     align-self: flex-end;
     margin-top: 3em;
 }
+
+#registreren-knop {
+    display: inline-flex;
+    align-self: flex-end;
+    background-color: #2575b9;
+    color: white;
+    margin-top: 3em;
+    text-decoration: none;
+}
+
 
 #aanmelden a:hover,
 #aanmelden a:active {
